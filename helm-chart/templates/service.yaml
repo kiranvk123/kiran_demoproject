@@ -1,0 +1,14 @@
+# helm-chart/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: kiran-demo
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: kiran-demo
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5000
+      nodePort: {{ .Values.service.nodePort }}
+

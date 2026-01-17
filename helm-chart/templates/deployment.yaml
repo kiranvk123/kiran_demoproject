@@ -1,0 +1,21 @@
+# helm-chart/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kiran-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kiran-demo
+  template:
+    metadata:
+      labels:
+        app: kiran-demo
+    spec:
+      containers:
+      - name: kiran-demo
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 5000
+
