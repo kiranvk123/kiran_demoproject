@@ -5,12 +5,12 @@ pipeline {
     DOCKER_IMAGE = "kiranvk123/kiran-demo:latest"
   }
 
-  stage('Checkout') {
-  steps {
-    git branch: 'main', url: 'https://github.com/kiranvk123/kiran_demoproject.git'
-     }
+  stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', url: 'https://github.com/kiranvk123/kiran_demoproject.git'
+      }
     }
-
 
     stage('Install Dependencies') {
       steps {
