@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = "kiranvk123/kiran-demo:latest"
+    DOCKER_IMAGE = "kiran318/kiran-demo:latest"
   }
 
   stages {
